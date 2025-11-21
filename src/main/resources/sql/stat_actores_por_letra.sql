@@ -1,0 +1,1 @@
+SELECT LEFT(first_name,1) AS inicial, COUNT(*) as actores FROM actor GROUP BY LEFT(first_name,1);

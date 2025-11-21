@@ -1,0 +1,32 @@
+body {
+    background: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+    font-weight: 700;
+    color: #343a40;
+}
+.card {
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+    transition: transform 0.2s ease-in-out;
+    background: #fff;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgb(0 0 0 / 0.15);
+}
+.card h5 {
+    font-weight: 600;
+    color: #495057;
+}
+canvas {
+    max-height: 320px;
+    margin-top: 1rem;
+}
+/* Responsive: en pantallas pequeñas ajustar márgenes */
+@media (max-width: 576px) {
+    canvas {
+        max-height: 280px;
+    }
+}

@@ -1,0 +1,6 @@
+thead th.sort-asc::after {
+    content: " ▲";
+}
+thead th.sort-desc::after {
+    content: " ▼";
+}

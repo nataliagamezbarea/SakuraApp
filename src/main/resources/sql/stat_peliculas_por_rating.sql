@@ -1,0 +1,1 @@
+SELECT rating, COUNT(*) as peliculas FROM film GROUP BY rating ORDER BY rating;

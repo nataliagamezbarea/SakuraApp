@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard Sakila</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link th:href="@{/css/dashboard.css}" rel="stylesheet" />
+</head>
+<body>
+
+<div class="container py-5">
+
+    <!-- Botón Volver atrás -->
+    <div class="mb-4">
+        <button type="button" class="btn btn-secondary" onclick="history.back()">← Volver atrás</button>
+    </div>
+
+    <h1 class="text-center mb-5">Dashboard - Base de Datos <span class="text-primary">SAKILA</span></h1>
+
+    <!-- NUEVO: Totales de Clientes, Películas y Países -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5>Clientes</h5>
+                    <h2 th:text="${numClientes}">0</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5>Películas</h5>
+                    <h2 th:text="${numPeliculas}">0</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5>Países</h5>
+                    <h2 th:text="${numPaises}">0</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Películas por Rating -->
+        <div class="col-lg-6 col-md-12">
+            <div class="card p-4">
+                <h5 class="text-center mb-3">Películas por Rating</h5>
+                <canvas id="chartRating"></canvas>
+            </div>
+        </div>
+
+        <!-- Actores por letra inicial -->
+        <div class="col-lg-6 col-md-12">
+            <div class="card p-4">
+                <h5 class="text-center mb-3">Actores por letra inicial</h5>
+                <canvas id="chartActores"></canvas>
+            </div>
+        </div>
+
+        <!-- Películas por Categoría -->
+        <div class="col-lg-6 col-md-12">
+            <div class="card p-4">
+                <h5 class="text-center mb-3">Películas por Categoría</h5>
+                <canvas id="chartCategorias"></canvas>
+            </div>
+        </div>
+
+        <!-- Alquileres por mes -->
+        <div class="col-lg-6 col-md-12">
+            <div class="card p-4">
+                <h5 class="text-center mb-3">Alquileres por mes</h5>
+                <canvas id="chartAlquileres"></canvas>
+            </div>
+        </div>
+
+        <!-- Clientes por país -->
+        <div class="col-12">
+            <div class="card p-4">
+                <h5 class="text-center mb-3">Clientes por país</h5>
+                <canvas id="chartClientesPais"></canvas>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    const filmsPorRating = [[${filmsPorRating}]];
+    const actoresInicial = [[${actoresInicial}]];
+    const filmsPorCategoria = [[${filmsPorCategoria}]];
+    const alquileresMes = [[${alquileresMes}]];
+    const clientesPais = [[${clientesPais}]];
+    /*]]>*/
+</script>
+<script th:src="@{/js/dashboard.js}"></script>
+
+</body>
+</html>
