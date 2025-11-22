@@ -34,12 +34,13 @@ git clone https://github.com/nataliagamezbarea/SakuraApp
 cd SakuraApp
 ```
 
-### 2. Configura la conexión a la base de datos
+### 2. Configura la conexión a la base de datos (si es diferente) OPCIONAL
 
 Edita el archivo `src/main/resources/application.properties` y pon tus credenciales y el nombre de la base de datos SAKILA. Ejemplo:
 
+Si tienes alojada la base de datos en un servidor tendrias que cambiar localhost:3306 a tu ip del servidor de la base de datos
 ```
-spring.datasource.url=jdbc:mariadb://localhost:3306/sakila
+spring.datasource.url=jdbc:mariadb://localhost:3306/basededatos
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contraseña
 spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
