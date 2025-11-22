@@ -17,7 +17,7 @@
 ## Requisitos previos
 
 1. **Java 11.0.28 o superior**
-    - [Descargar Java](https://adoptium.net/es/)
+    - [Descargar Java](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
 2. **MySQL Server** o **MariaDB** con la base de datos SAKILA importada
     - [Descargar Sakila Database scripts](https://dev.mysql.com/doc/sakila/en/)
 3. **Gradle 8.14.3** (wrapper incluido, no necesitas instalación)
