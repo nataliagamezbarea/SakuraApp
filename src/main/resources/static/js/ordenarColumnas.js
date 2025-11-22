@@ -1,10 +1,14 @@
-// Inicializa ordenar columnas para cualquier tabla
 function initOrdenarColumnas(tablaId) {
     const tabla = typeof tablaId === 'string' ? document.getElementById(tablaId) : tablaId;
     if (!tabla) return;
 
     const encabezados = tabla.querySelectorAll('thead th');
     let direccionOrden = Array(encabezados.length).fill(null);
+
+    // Orden inicial: primera columna ascendente
+    direccionOrden[0] = 'asc';
+    ordenarTablaPorColumna(tabla, 0, 'asc');
+    encabezados[0].classList.add('sort-asc');
 
     encabezados.forEach((th, i) => {
         th.style.cursor = 'pointer';
