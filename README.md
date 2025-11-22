@@ -18,7 +18,7 @@
 
 1. **Java 11.0.28 o superior**
     - [Descargar Java](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
-2. **MySQL Server** o **MariaDB** con la base de datos SAKILA importada
+2. **MariaDB** con la base de datos SAKILA importada
     - [Descargar Sakila Database scripts](https://dev.mysql.com/doc/sakila/en/)
 3. **Gradle 8.14.3** (wrapper incluido, no necesitas instalación)
 4. **Navegador web**
@@ -39,10 +39,10 @@ cd SakuraApp
 Edita el archivo `src/main/resources/application.properties` y pon tus credenciales y el nombre de la base de datos SAKILA. Ejemplo:
 
 ```
-spring.datasource.url=jdbc:mysql://localhost:3306/sakila
+spring.datasource.url=jdbc:mariadb://localhost:3306/sakila
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contraseña
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
 ```
 
 ### 3. Compila y ejecuta la aplicación
