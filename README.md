@@ -4,14 +4,13 @@
 
 ## Tecnologías utilizadas
 
-- **Java 17+**
+- **Java 11+**
 - **Spring Boot 3**
 - **Gradle**
 - **Thymeleaf** (plantillas HTML)
 - **Bootstrap 5** (estilos)
 - **Chart.js** (gráficos)
-- **MySQL** o **MariaDB** (base de datos SAKILA)
-- **JDBC** (driver necesario: [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/))
+- **MariaDB** (base de datos SAKILA)
 
 ---
 
