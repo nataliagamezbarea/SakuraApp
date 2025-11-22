@@ -30,7 +30,7 @@
 ### 1. Clona el proyecto
 
 ```bash
-git clone https://github.com/nataliagamezbarea/ConectorMariaDBSakila
+git clone https://github.com/nataliagamezbarea/SakuraApp
 cd SakuraApp
 ```
 
